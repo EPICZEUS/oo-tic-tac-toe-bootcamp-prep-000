@@ -49,4 +49,14 @@ class TicTacToe
       turn
     end
   end
+  
+  def turn_count
+    count = 0
+    counter = 0
+    @board.each do |pos|
+      count += 1 if position_taken?(counter)
+      counter += 1
+    end
+    count
+  end
 end
