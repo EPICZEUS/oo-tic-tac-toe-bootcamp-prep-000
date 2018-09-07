@@ -26,7 +26,7 @@ class TicTacToe
     user_input.to_i - 1
   end
   
-  def player_move(index, player)
+  move(index, player)
     @board[index] = player
   end
   
@@ -43,7 +43,7 @@ class TicTacToe
     input = gets.strip
     index = input_to_index(input)
     if valid_move?(index)
-      player_move(index, current_player)
+      move(index, current_player)
       display_board
     else
       turn
