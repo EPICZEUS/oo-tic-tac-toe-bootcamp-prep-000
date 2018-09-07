@@ -29,4 +29,8 @@ class TicTacToe
   def move(index, player)
     @board[index] = player
   end
+  
+  def position_taken?(location)
+    ["X", "O"].include?(@board[location])
+  end
 end
